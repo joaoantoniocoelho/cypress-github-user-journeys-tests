@@ -27,7 +27,6 @@ describe('GitHub Repository Management Workflow', () => {
         cy.get('input[name="commit"]').click();
 
         cy.visit(`https://github.com/${Cypress.env('GITHUB_USERNAME')}`);
-        // ..js-profile-editable-area should have button containing text 'Edit profile'
         cy.get('.js-profile-editable-area').find('button').contains('Edit profile').should('be.visible');
     });
 });
